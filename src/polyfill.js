@@ -94,7 +94,6 @@ if (!Array.prototype.includes) {
             if (this == null) {
                 throw new TypeError('"this" is null or not defined')
             }
-
             var o = Object(this)
 
             // 2. Let len be ? ToLength(? Get(O, "length")).
@@ -131,7 +130,7 @@ if (!Array.prototype.includes) {
             // 8. Return false
             return false
         }
-    })
+      })
 }
 
 // String.prototype.includes

@@ -1,37 +1,24 @@
-
-
-/* global ArrayBuffer, Int8Array, Uint8Array, navigator, location */
 export default {
-
-
-    projectValidate(json) {
-        const obj =
-            typeof json === 'object'
-                ? Object.assign({}, json.ide || json)
-                : JSON.parse(json);
-        return Array.isArray(obj.targets) && obj.meta;
-    },
-    //
-    
-    // 深度合并两个object
-    combineObject(obj1, obj2) {
-        let obj = {}
-        for(let k of Reflect.ownKeys(obj1)){
-            obj[k] = obj1[k]
+     getAllFieldsObjectOfBlock(block) {
+        let allFields = {};
+        if(!block) {
+            return allFields;
         }
-
-        for(let k of Reflect.ownKeys(obj2)){
-            let v1 = obj[k]
-            let v2 = obj2[k]
-            if(typeof(v1) == "object"){
-                if(typeof(v2) == "object"){
-                    obj[k] = this.combineObject(v1, v2);
-                    continue;
+        for (let i = 0, input; input = block.inputList[i]; i++) {
+            for (let j = 0, field; field = input.fieldRow[j]; j++) {
+                let name = field.name
+                if (name) {
+                    allFields[name] = block.getFieldValue(name);
                 }
             }
-            obj[k] = v2;
         }
-        return obj;
+        return allFields;
+    },
+    
+    setBlocksPropsWithFilter (filter, blocks) {
+        if(Array.isArray(blocks) && typeof filter === 'function') {
+            blocks.forEach(b => filter(b));
+        }
     },
     args2color(...args){
         if(args.length == 3){ //(1~255, 255, 255)
@@ -65,5 +52,4 @@ export default {
         }
         return '000000'
     }
-
-};
+}

@@ -1,5 +1,5 @@
 
-class StyleUtil {
+class Style {
     constructor() {
         var style = document.createElement("style");
         style.appendChild(document.createTextNode(""));
@@ -20,4 +20,4 @@ class StyleUtil {
     }
 }
 
-export default new StyleUtil();
+export default new Style();

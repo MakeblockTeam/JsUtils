@@ -191,4 +191,4 @@ class Signature {
 window.__Signature = Signature
 
 
-export {PrimaryType, FuncType, Signature}
+export {PrimaryType, FuncType, Signature as default}
