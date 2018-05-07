@@ -32,7 +32,9 @@ var originalWebpackConfig = {
     },
     output: {
         path: path.resolve(__dirname, build_path),
-        filename: "[name].js"
+        filename: "bundle.js",
+        library: "MscratchUtils",
+        libraryTarget: "umd"
     },
     module: {
         rules: [
@@ -124,8 +126,7 @@ var originalWebpackConfig = {
 var buildConfig = Object.assign({}, originalWebpackConfig, {
     plugins: originalWebpackConfig.plugins.concat([
         new HtmlWebpackPlugin({
-            title: "mstage demo",
-            template: 'src/index.ejs',
+            title: "MscratchUtils",
             filename: 'index.html'
         })
     ])

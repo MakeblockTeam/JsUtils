@@ -1,5 +1,4 @@
 import blocks from './blocks';
-import checker from './checker';
 import dom from './dom';
 import encoder from './encoder';
 import env from './env';
@@ -12,11 +11,10 @@ import signature from './signature';
 import string from './string';
 import style from './style';
 import time from './time';
-import util from './util';
+import object from './object';
 import xml from './xml';
-window.util = {
+export default {
     blocks,
-    checker,
     dom,
     encoder,
     env,
@@ -29,6 +27,6 @@ window.util = {
     string,
     style,
     time,
-    util,
+    object,
     xml
 };

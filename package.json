@@ -1,8 +1,8 @@
 {
-  "name": "mstage",
+  "name": "mscratch-utils",
   "version": "0.1.0",
   "description": "独立舞台",
-  "main": "dist/dist/mstage.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "start": "export PORT=9609 && NODE_ENV=dev webpack-dev-server --open",
     "build": "npm run clean && export PORT=9609 && NODE_ENV=production webpack --progress --colors --bail",
