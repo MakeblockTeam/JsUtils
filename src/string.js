@@ -1,5 +1,9 @@
 export default {
-    
+
+    isString (value) {
+        return typeof value === 'string' || value instanceof String;
+    },
+
     /**
      * 转义字符串中出现的: &, <, >, ', "
      */
@@ -75,12 +79,13 @@ export default {
         }
         return result;
     },
-    // string template at runtime
+
     // usage: stringTemplate(`${arg1}, ${arg2}`, {arg1:'val1', arg2:'val2'})
     stringTemplate(strTemplate, env) {
         const tpl = new Function("return `"+strTemplate+"`;");
         return tpl.call(env);
     },
+
     generateStrList (str) {
         let strList = [];
         if(Array.isArray(str)) {
@@ -94,18 +99,5 @@ export default {
         if(typeof letters === 'string' && letters.length) {
             return letters[0].toUpperCase() + letters.substring(1);
         }
-    },
-    // 转换arduinoc显示名称，其他类似需要转换的codetype都可以放在这里处理
-    getCodeTypeLabel (codeType) {
-        let codeTypeMap = {
-            'arduinoc': 'Arduino C'
-        }
-        if (codeType) {
-            codeType = codeType.toLowerCase();
-        } else {
-            codeType = 'block';
-        }
-        return codeTypeMap[codeType] || codeType;
-    },
-    
+    }
 }

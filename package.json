@@ -1,42 +1,40 @@
 {
-  "name": "mscratch-utils",
-  "version": "0.1.1",
-  "description": "独立舞台",
-  "main": "dist/bundle.js",
-  "scripts": {
-    "start": "export PORT=9609 && NODE_ENV=dev webpack-dev-server --open",
-    "build": "npm run clean && export PORT=9609 && NODE_ENV=production webpack --progress --colors --bail",
-    "clean": "rimraf ./dist && mkdirp dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gitee.com/makeblockcc/mstage.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
-    "html-webpack-plugin": "^2.30.1",
-    "mkdirp": "^0.5.1",
-    "rimraf": "^2.6.2",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
-  },
-  "dependencies": {
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "lodash": "^4.17.10",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "utf8": "^3.0.0"
-  }
+    "name": "mscratch-utils",
+    "version": "0.1.2",
+    "description": "js tools",
+    "main": "dist/mscratch-utils.js",
+    "scripts": {
+        "build": "npm run clean && webpack --progress --colors --bail",
+        "clean": "rimraf ./dist && mkdirp dist",
+        "test": "mocha --require mocha-setup.js --recursive --compilers js:babel-core/register",
+        "pub": "npm publish --registry http://npm.makeblock.local:4873"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MakeblockTeam/JsUtils.git"
+    },
+    "author": "makeblock Team",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "babel-preset-stage-1": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "babel-preset-stage-3": "^6.24.1",
+        "chai": "^4.1.2",
+        "jsdom": "^11.10.0",
+        "mkdirp": "^0.5.1",
+        "require-hacker": "^3.0.1",
+        "rimraf": "^2.6.2",
+        "webpack": "^3.10.0"
+    },
+    "dependencies": {
+        "utf8": "^3.0.0"
+    }
 }

@@ -1,8 +1,4 @@
 export default {
-    /**
-     * 判断设备类型
-     * @return {object} 设备判别方法
-     */
     checkDeviceType() {
         let checkFunc = {
             android() {
@@ -64,9 +60,5 @@ export default {
         };
 
         return device;
-    },
-    // 检测当前是否位于 mblock5 环境
-    isInMblock5Env () {
-        return (typeof MbApi !== 'undefined' && window.MbApi.middlewares);
-    },
+    }
 }
