@@ -13,20 +13,21 @@ import style from './style';
 import time from './time';
 import object from './object';
 import xml from './xml';
-export default {
-    blocks,
-    dom,
-    encoder,
-    env,
-    event,
-    goog,
-    math,
-    mscratch,
-    polyfill,
-    signature,
-    string,
-    style,
-    time,
-    object,
-    xml
+export default {};
+export {
+    blocks as mUtilBlocks,
+    dom as mUtilDom,
+    encoder as mUtilEncoder,
+    env as mUtilEnv,
+    event as mUtilEvent,
+    goog as mUtilGoog,
+    math as mUtilMath,
+    mscratch as mUtilMscratch,
+    polyfill as mUtilPolyfill,
+    signature as mUtilSignature,
+    string as mUtilString,
+    style as mUtilStyle,
+    time as mUtilTime,
+    object as mUtilObject,
+    xml as mUtilXml,
 };

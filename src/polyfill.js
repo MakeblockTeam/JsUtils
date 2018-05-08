@@ -252,3 +252,4 @@ if (!Array.prototype.fill) {
         }
     })
 }
+export default {};
