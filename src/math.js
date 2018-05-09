@@ -12,10 +12,13 @@ export default {
         }
         return arr.join('');
     },
-    isNumberString(str) {
-        const numberReg = /^\'(-?\d*)(\.\d+)?\'$/;
-        const spaceReg = /^\'\s*\'$/;
-        return numberReg.test(str) || spaceReg.test(str);
+    isNumberString(theObj) {
+        let str = theObj.toString().trim();
+        var reg = /^-?[0-9]+.?[0-9]*$/;
+        if (reg.test(str)) {
+            return true;
+        }
+        return false;
     },
     isNumberStringForC(str) {
         const numberReg = /^\"(-?\d*)(\.\d+)?\"$/;
@@ -56,7 +59,7 @@ export default {
      * @param  {String|Array} ascList ascii string or array
      * @return {String}
      */
-    
+
 
 
     handleMathExpression(expStr, isText) {
