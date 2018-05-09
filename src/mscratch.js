@@ -23,6 +23,9 @@ export default {
         }
         return false;
     },
+    isInMblock5Env() {
+        return (typeof MbApi !== 'undefined' && window.MbApi.middlewares);
+    },
     matrix2hexStr(matrix) {
         let result = [],
             temp = [];

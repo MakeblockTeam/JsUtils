@@ -18,9 +18,5 @@ export default {
             obj[k] = v2;
         }
         return obj;
-    },
-
-    isInMblock5Env() {
-        return (typeof MbApi !== 'undefined' && window.MbApi.middlewares);
     }
 };

@@ -14,18 +14,18 @@ import object from './object';
 import rj25 from './rj25';
 
 export {
-    dom as mUtilDom,
-    encoder as mUtilEncoder,
-    env as mUtilEnv,
-    event as mUtilEvent,
-    goog as mUtilGoog,
-    math as mUtilMath,
+    dom as mDom,
+    encoder as mEncoder,
+    event as mEvent,
+    goog as mGoog,
+    math as mMath,
+    env,
     mscratch,
     rj25,
-    polyfill as mUtilPolyfill,
-    signature as mUtilSignature,
-    string as mUtilString,
-    style as mUtilStyle,
-    time as mUtilTime,
-    object as mUtilObject
+    polyfill as mPolyfill,
+    signature as mSignature,
+    string as mString,
+    style as mStyle,
+    time as mTime,
+    object as mObject,
 };
